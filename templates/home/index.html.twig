@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% include "header/_header.html.twig" %}
+    <div class="container">
+        <div class="row">
+        <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center mt-4">
+             <img src="{{ asset('images/validationcompetences.jpg') }}" class="img-fluid img-thumbnail" alt="Sport d'équipe">
+        </div>
+        <div class="col-12 col-lg-6 mt-4 d-flex justify-content-center align-items-center">
+            <div class="bg-light p-4 rounded">                
+            <p><strong>Bienvenue sur Validation'EPS, le site qui vous permet de valider vos compétences en EPS.</strong></p>
+                <ul>
+                    <li>Vous pouvez vous connecter ou vous inscrire pour accéder à votre espace personnel.</li>
+                    <li>Si vous êtes un enseignant, vous pouvez également valider les compétences de vos élèves.</li>
+                    <li>Si vous êtes un élève, vous pouvez consulter vos compétences validées.</li>
+                    <li>Si vous êtes un administrateur, vous pouvez gérer les utilisateurs et les compétences.</li>
+                    <li>Si vous avez des questions, vous pouvez consulter la documentation ou nous contacter.</li>
+                </ul>
+                <a href="" class="nav-link linkCompte">Créer un compte <twig:ux:icon name="bi:arrow-right" class="ms-2" height="16" width="16" aria-hidden="true" /></a>
+            </div>
+        </div>
+        </div>
+    </div>
+{% endblock %}

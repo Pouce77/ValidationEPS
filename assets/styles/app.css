@@ -1,3 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 body {
     background-color: skyblue;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hooverlink{
+    border: black solid 1px;
+}
+.hooverlink:hover{
+    color: gray;
+    border:gray solid 1px;
+    transform: translate(0,-2px);
+}
+
+.linkCompte:hover{
+    color: gray;
+    transform: translate(0,-2px);
 }
