@@ -1,15 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    {% if app.user %}
-        {% if 'ROLE_PROF' in app.user.roles %}
-            {% include "header/_headerTeacher.html.twig" %}
-        {% elseif'ROLE_ELEVE' in app.user.roles  %}
-            {% include "header/_headerStudent.html.twig" %}
-        {% endif %}
-    {% else %}
-        {% include "header/_header.html.twig" %}
-    {% endif %}
+    {% include "header/_header.html.twig" %}
     <div class="container">
         <div class="row">
         <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center mt-4">
