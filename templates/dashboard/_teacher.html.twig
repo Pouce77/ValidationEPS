@@ -1,7 +1,7 @@
 {% include "modal/_addActivity.html.twig" %}
 <h6 class="bg-body-secondary p-2">Tableau de bord de {{app.user.firstname}} {{app.user.lastname}}</h6>
     <div class="container">
-       <div class="d-flex flex-wrap justify-content-between m-4">
+       <div class="d-flex flex-wrap justify-content-between m-4 align-items-start">
        <card class="card col-12 col-lg-5">
            <div class="card-header">
            <div class="d-flex flex-rox justify-content-between">
@@ -27,20 +27,15 @@
                           <tr>
                             <th>Prénom</th>
                             <th>Nom</th>
-                            <th>Classe</th>
                           </tr>
                      </thead>
                      <tbody>
+                     {% for student in students %}
                           <tr>
-                            <td>John</td>
-                            <td>Doe</td>
-                            <td>6ème</td>
-                          </tr>
+                            <td>{{ student.firstname }}</td>
+                            <td>{{ student.lastname }}</td>
                           <tr>
-                            <td>Jane</td>
-                            <td>Doe</td>
-                            <td>5ème</td>
-                          </tr>
+                    {% endfor %}
                      </tbody>
                </table>
            </div>
