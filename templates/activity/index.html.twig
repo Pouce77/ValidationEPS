@@ -4,10 +4,11 @@
 
 {% block body %}
 {% include "header/_headerTeacher.html.twig" %}
+{% include "modal/_deleteActivity.html.twig" %}
 <div class="bg-body-secondary p-2 d-flex flex-row justify-content-between">
     <h4 class="m-0">{{activity.name}}</h4>
     <a href="#" type="button" class="btn btn-primary">Valider un élève ou un groupe d'élèves</a>
-    <a href="#"><twig:ux:icon name="bi:trash" class="me-4 text-danger" height="32" width="32" aria-hidden="true" /></a>
+    <a role="button" data-bs-toggle="modal" data-bs-target="#deleteActivity" title="Supprimer"><twig:ux:icon name="bi:trash" class="me-4 text-danger" height="32" width="32" aria-hidden="true" /></a>
 </div>
     <div class="container">
         <div class="d-flex flex-wrap justify-content-between m-4">

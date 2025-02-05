@@ -1,17 +1,15 @@
-<div class="modal" id="addActivity">
+<div class="modal" id="deleteActivity">
     <div class="modal-dialog" role="document">
         <div class="modal-content">                
             <div class="modal-header">
-                <h5 class="modal-title">Ajouter une activité</h5>
+                <h5 class="modal-title">Supprimer l'activité {{activity.name}}</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true"></span>
                 </button>
             </div>
             <div class="modal-body">
-                {{form_start(form,{'action': path('app_dashboard')})}}
-                    {{form_widget(form.name)}}
-                    <button class="btn btn-primary mt-2" type="submit">Créer l'activité</button>
-                {{form_end(form)}}
+                <p>Êtes-vous sûr de vouloir supprimer cette activité ?</p>
+                <a href="{{path('app_activity_delete',{'id': activity.id })}}" class="btn btn-danger">Supprimer</a>
             </div>
         </div>
     </div>
