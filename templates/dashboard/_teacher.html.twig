@@ -1,0 +1,49 @@
+{% include "modal/_addActivity.html.twig" %}
+<h6 class="bg-body-secondary p-2">Tableau de bord de {{app.user.firstname}} {{app.user.lastname}}</h6>
+    <div class="container">
+       <div class="d-flex flex-wrap justify-content-between m-4">
+       <card class="card col-12 col-lg-5">
+           <div class="card-header">
+           <div class="d-flex flex-rox justify-content-between">
+               <h5 class="card-title">Mes activités</h5>
+               <a role="button" data-bs-toggle="modal" data-bs-target="#addActivity" title="Modifier"><twig:ux:icon name="bi:plus-circle" class="ms-2" height="24" width="24" aria-hidden="true" /></a>
+            </div>
+           </div>
+           <div class="card-body">
+               <ul>
+               {% for activity in activities %}
+                     <a class="linkCompte nav-link" href="{{path('app_activity',{'id':activity.id})}}"><li>{{ activity.name }}</li></a>
+               {% endfor %}
+               </ul>
+           </div>
+        </card>
+        <card class="card col-12 col-lg-5">
+           <div class="card-header">
+               <h5 class="card-title">Mes élèves</h5>
+           </div>
+           <div class="card-body">
+               <table class="table table-striped">
+                     <thead>
+                          <tr>
+                            <th>Prénom</th>
+                            <th>Nom</th>
+                            <th>Classe</th>
+                          </tr>
+                     </thead>
+                     <tbody>
+                          <tr>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>6ème</td>
+                          </tr>
+                          <tr>
+                            <td>Jane</td>
+                            <td>Doe</td>
+                            <td>5ème</td>
+                          </tr>
+                     </tbody>
+               </table>
+           </div>
+        </card> 
+        </div>
+    </div>

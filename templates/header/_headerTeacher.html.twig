@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-light fontIndie">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img src="{{asset('images/logoEPS.png')}}" alt="logo" width="48px" height="48px"></a>
+    <a class="navbar-brand" href="/dashboard"><img src="{{asset('images/logoEPS.png')}}" alt="logo" width="48px" height="48px"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -26,9 +26,9 @@
           </ul>
         </li>
       </ul>
-    </div>
-    <div class="hoverlink d-flex flex-row">
-      <a class="nav-link hooverlink me-4 rounded p-2 text-center" href={{path('app_logout')}}>Se déconnecter</a>
+      <div class="hoverlink d-flex flex-row">
+        <a class="nav-link hooverlink me-4 rounded p-2 text-center" href={{path('app_logout')}}>Se déconnecter</a>
+      </div>
     </div>
   </div>
 </nav>

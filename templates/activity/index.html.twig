@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{activity.name}}{% endblock %}
+
+{% block body %}
+{% include "header/_headerTeacher.html.twig" %}
+<div class="bg-body-secondary p-2 d-flex flex-row justify-content-between">
+    <h4 class="m-0">{{activity.name}}</h4>
+    <a href="#" type="button" class="btn btn-primary">Valider un élève ou un groupe d'élèves</a>
+    <a href="#"><twig:ux:icon name="bi:trash" class="me-4 text-danger" height="32" width="32" aria-hidden="true" /></a>
+</div>
+    <div class="container">
+        <div class="d-flex flex-wrap justify-content-between m-4">
+            <card class="card col-12 col-lg-5">
+                <div class="card-header">
+                    <div class="d-flex flex-rox justify-content-between">
+                        <h5 class="card-title">Mes exercices à valider</h5>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <tr>
+                            <th>Exercices</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>Exercice n°1</td>
+                            <td class="text-end">
+                                <a href="#"><twig:ux:icon name="bi:pencil" class="me-4 text-success" height="16" width="16" aria-hidden="true" /></a>
+                                <a href="#"><twig:ux:icon name="bi:trash" class="me-2 text-danger" height="16" width="16" aria-hidden="true" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Exercice n°2</td>
+                           <td class="text-end">
+                                <a href="#"><twig:ux:icon name="bi:pencil" class="me-4 text-success" height="16" width="16" aria-hidden="true" /></a>
+                                <a href="#"><twig:ux:icon name="bi:trash" class="me-2 text-danger" height="16" width="16" aria-hidden="true" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Exercice n°3</td>
+                            <td class="text-end">
+                                <a href="#"><twig:ux:icon name="bi:pencil" class="me-4 text-success" height="16" width="16" aria-hidden="true" /></a>
+                                <a href="#"><twig:ux:icon name="bi:trash" class="me-2 text-danger" height="16" width="16" aria-hidden="true" /></a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </card>
+    </div>
+{% endblock %}

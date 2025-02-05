@@ -1,16 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Tableau de bord de {{app.user.email}}{% endblock %}
+{% block title %}Tableau de bord de {{app.user.firstname}} {{app.user.lastname}}{% endblock %}
 
 {% block body %}
-        {% if 'ROLE_PROF' in app.user.roles %}
-            {% include "header/_headerTeacher.html.twig" %}
-        {% elseif'ROLE_ELEVE' in app.user.roles  %}
-            {% include "header/_headerStudent.html.twig" %}
-        {% endif %}
-    <h6 class="bg-body-secondary p-2">Tableau de bord de {{app.user.email}}</h6>
-    <div class="container">
-        
-       
-    </div>
+    {% if 'ROLE_PROF' in app.user.roles %}
+        {% include "header/_headerTeacher.html.twig" %}
+        {% include "dashboard/_teacher.html.twig" %}
+    {% elseif'ROLE_ELEVE' in app.user.roles  %}
+        {% include "header/_headerStudent.html.twig" %}
+        {% include "dashboard/_student.html.twig" %}
+    {% endif %}
 {% endblock %}
